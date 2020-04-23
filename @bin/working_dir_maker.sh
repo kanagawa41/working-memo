@@ -11,8 +11,7 @@ fi
 ORIGIN_DIR=$SCRIPT_DIR/../$1
 [ ! -d "$ORIGIN_DIR" ] && echo "Directory $ORIGIN_DIR DOES NOT exists." && exit 1
 
-# DIR=$SCRIPT_DIR/../$(date +"%Y%m%d")
-DIR=$SCRIPT_DIR/../20200101
+DIR=$SCRIPT_DIR/../$(date +"%Y%m%d")
 
 while true; do
   read -p "Do you wish to create directory $DIR?: " yn

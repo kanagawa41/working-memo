@@ -6,6 +6,11 @@ I usually use for write some memo of working.
 In .bashrc or .bash_profile.
 ```
 alias mkwdir='cd ~/Documents/notes/@bin && ./working_dir_maker.sh origin && cd -'
-alias watch_note='nohup /path/to/Documents/notes/watch_today_note.sh'
+alias watch_note='nohup /path/to/Documents/notes/@bin/watch_today_note.sh'
 ```
 
+## execute these
+```
+$ mkwdir
+$ watch_note
+```
