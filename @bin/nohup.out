@@ -1,1 +1,6 @@
 nohup: /Users/kishira_takuya/Documents/notes/watch_today_note.sh: No such file or directory
+30762 is killed.
+mkdir: /Users/kishira_takuya/Documents/notes/@bin/../20200519: File exists
+Target file: /Users/kishira_takuya/Documents/notes/@bin/../20200519/note.md
+watch /Users/kishira_takuya/Documents/notes/@bin/../20200519/note.md
+pid: 33959

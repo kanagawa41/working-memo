@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xe
 
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 
@@ -22,4 +22,11 @@ while true; do
   esac
 done
 
-cp -r $ORIGIN_DIR $DIR
+cp -r $ORIGIN_DIR/ $DIR
+
+# 05/19(new) 05/18(get this) 05/17...
+LAST_PATH=`ls -d $SCRIPT_DIR/../20* | sort -nr | head -2 | tail -1`
+if [ -d "$LAST_PATH" ]; then
+  cp -f $LAST_PATH/todo.md $DIR
+  echo "todo.md was copied from $LAST_DIR."
+fi

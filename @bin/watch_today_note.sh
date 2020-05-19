@@ -45,7 +45,6 @@ mkdir $DIR
 FILE=$DIR/note.md
 echo "Target file: $FILE"
 watch_note $FILE &
-# . $SCRIPT_DIR/watch_note.sh $FILE &
 
 echo "${!}" > $PID_FILE
 echo "pid: `cat $PID_FILE`"

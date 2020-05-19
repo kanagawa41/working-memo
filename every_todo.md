@@ -10,9 +10,9 @@
 ## Check the mails
 ## Change to the glassese for working
 ## Change to the shoes
-## Put out the pill for dust from the can
+## Take out the pill from the can
 ## Write tasks for today
-## Wating starting meeting in zoom(9:25)
+## Wating the meeting in zoom(9:25)
 
 # TODO end of work
 ## Change to the glassese for usually
