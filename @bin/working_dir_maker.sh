@@ -29,4 +29,9 @@ LAST_PATH=`ls -d $SCRIPT_DIR/../20* | sort -nr | head -2 | tail -1`
 if [ -d "$LAST_PATH" ]; then
   cp -f $LAST_PATH/todo.md $DIR
   echo "todo.md was copied from $LAST_DIR."
+
+  if [ -f "$LAST_PATH/over_days.md" ]; then
+    cp -f $LAST_PATH/over_days.md $DIR
+    echo "over_days.md was copied from $LAST_DIR."
+  fi
 fi
