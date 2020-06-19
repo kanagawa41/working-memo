@@ -1,21 +1,14 @@
-2020*/
+# Ignore everything
+*
 
-January/
-February/
-March/
-April/
-May/
-June/
-July/
-August/
-September/
-October/
-November/
-December/
+!bin
+!bin/**
+!origin
+!origin/**
 
-out/
+!importants
+!old
+!@index
 
-.DS_Store
-nohup.out
-
-bookmark.md
+!.gitignore
+!README.md

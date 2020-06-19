@@ -39,8 +39,7 @@ if [ -f "$PID_FILE" ]; then
   echo "$(cat $PID_FILE) is killed."
 fi
 
-DIR=$SCRIPT_DIR/../$(date +"%Y%m%d")
-mkdir $DIR
+DIR=$SCRIPT_DIR/../@index/$(date +"%Y%m%d")
 
 FILE=$DIR/note.md
 echo "Target file: $FILE"
