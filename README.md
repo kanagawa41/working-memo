@@ -9,14 +9,9 @@ TODO: alias are created automatically with a bash
 
 In `~/.bashrc` or `~/.bash_profile`.
 ```
-alias mkwdir='cd /path/to/Documents/notes/bin && ./working_dir_maker.sh -y && cd -'
-alias watch_note='nohup /path/to/Documents/notes/bin/watch_today_note.sh'
-```
-
-## execute these
-```
-$ mkwdir
-$ watch_note
+alias mkwdir='cd ~/Documents/notes/bin && ./working_dir_maker.sh -y && cd -'
+alias watch_note='nohup ~/Documents/notes/bin/watch_today_note.sh'
+alias pack_folder='cd ~/Documents/notes/bin && ./pack_past_folder.sh -y && cd -'
 ```
 
 ## Add files that your favorite in @importants
@@ -45,4 +40,4 @@ e.g. aws key, database password in staging or production etc...
 
 # Tips
 ### over_*.md
-If you could bring out notes for over a couple of days only, you create `over_*.md` note in day folder.
+If you would like to bring out notes for over a couple of days, you create `over_*.md` note in the day folder.
