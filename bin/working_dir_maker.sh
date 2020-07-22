@@ -45,7 +45,7 @@ if [ -d "$LAST_PATH" ]; then
   cp -f $LAST_PATH/todo.md $TODAY_DIR
   # Clear list of "DONE"
   head -`grep -n "# DONE" $TODAY_DIR/todo.md | cut -d: -f1` $TODAY_DIR/todo.md > $TODAY_DIR/todo.md.tmp
-  mv $TODAY_DIR/todo.md.tmp ./todo.md
+  mv $TODAY_DIR/todo.md.tmp $TODAY_DIR/todo.md
   echo "todo.md was copied from $LAST_DIR."
 
   # WARN: not add Brackets in this condition
