@@ -48,6 +48,11 @@ if [ -d "$LAST_PATH" ]; then
   mv $TODAY_DIR/todo.md.tmp $TODAY_DIR/todo.md
   echo "todo.md was copied from $LAST_DIR."
 
+  # Add today's working
+  start_line=`grep -n "▼明日の予定" $LAST_PATH/daily_report.md | cut -d: -f1`
+  end_line=`grep -n "▼共有事項" $LAST_PATH/daily_report.md | cut -d: -f1`
+  head -$end_line $LAST_PATH/daily_report.md | tail -`expr $end_line - $start_line + 1` | head -`expr $end_line - $start_line` > $TODAY_DIR/note.md
+
   # WARN: not add Brackets in this condition
   if ls $LAST_PATH/over_*.md 1> /dev/null 2>&1; then
     cp -f $LAST_PATH/over_*.md $TODAY_DIR
