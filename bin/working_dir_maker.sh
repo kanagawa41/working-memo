@@ -49,7 +49,7 @@ if [ -d "$LAST_PATH" ]; then
   echo "todo.md was copied from $LAST_DIR."
 
   # Add today's working
-  start_line=`grep -n "▼明日の予定" $LAST_PATH/daily_report.md | cut -d: -f1`
+  start_line=`grep -n "▼次営業日の予定" $LAST_PATH/daily_report.md | cut -d: -f1`
   end_line=`grep -n "▼共有事項" $LAST_PATH/daily_report.md | cut -d: -f1`
   head -$end_line $LAST_PATH/daily_report.md | tail -`expr $end_line - $start_line + 1` | head -`expr $end_line - $start_line` > $TODAY_DIR/note.md
 
