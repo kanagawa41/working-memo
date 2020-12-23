@@ -36,6 +36,10 @@ done
 
 cp -r $ORIGIN_DIR/ $TODAY_DIR
 
+# Report title
+TODAY_REPORT=$TODAY_DIR/daily_report.md
+echo -e "[info][title]$(date +%F)($(date +%A)) 日報 岸良[/title]\n$(awk 'NR >= 2' $TODAY_REPORT)" > $TODAY_REPORT
+
 # execute this in 05/19
 # Folderes are 05/17, 05/16, 05/15 etc...
 #
@@ -54,8 +58,8 @@ if [ -d "$LAST_PATH" ]; then
   head -$end_line $LAST_PATH/daily_report.md | tail -`expr $end_line - $start_line + 1` | head -`expr $end_line - $start_line` > $TODAY_DIR/note.md
 
   # WARN: not add Brackets in this condition
-  if ls $LAST_PATH/over_*.md 1> /dev/null 2>&1; then
-    cp -f $LAST_PATH/over_*.md $TODAY_DIR
+  if ls $LAST_PATH/over_*.* 1> /dev/null 2>&1; then
+    cp -f $LAST_PATH/over_*.* $TODAY_DIR
     echo "over_*.md was copied from $LAST_DIR."
   fi
 fi
